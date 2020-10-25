@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="icon" href="../static/favicon.ico" />
+    <title>Voter Feedback</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="../static/logo.png" alt="Vote" class="logo" />
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
+      <form action="/submit" method="POST">
+        <div class="form-group">
+          <h3>Voter Name</h3>
+          <input
+            type="text"
+            name="voter"
+            placeholder="Please input your full name"
+          />
+        </div>
+        <div class="form-group">
+          <h3>Voting Site</h3>
+          <select name="pollsite">
+            <option value="">Where did you vote?</option>
+            <option value="Carey Gardens Community Center">Carey Gardens Community Center</option>
+            <option value="FDR High School">FDR High School</option>
+            <option value="Kings Theatre">Kings Theatre</option>
+            <option value="Brooklyn College">Brooklyn College</option>
+            <option value=" Park Slope Armory YMCA"> Park Slope Armory YMCA</option>
+            <option value="Council Center for Senior Citizens">Council Center for Senior Citizens</option>
+            <option value="Williamsburg Community Center">Williamsburg Community Center</option>
+            <option value="Barclays Center">Barclays Center</option>
+            <option value="Brooklyn Museum">Brooklyn Museum</option>
+            <option value="Masonic Temple">Masonic Temple</option>
+            <option value="Taylor Wythe Community Center">Taylor Wythe Community Center</option>
+            <option value="Dance Atlantic Studio">Dance Atlantic Studio</option>
+            <option value="PS 68">PS 68</option>
+            <option value="Youth Center">Youth Center</option>
+            <option value="St. Dominic's">St. Dominic's</option>
+            <option value="5201 Avenue N">5201 Avenue N</option>
+            <option value="Our Lady of Perpetual Help">Our Lady of Perpetual Help</option>
+            <option value="Fort Hamilton High School">Fort Hamilton High School</option>
+            <option value="Bushwick Campus">Bushwick Campus</option>
+            <option value="IS 33">IS 33</option>
+            <option value="New York City College of Technology"> New York City College of Technology</option>
+            <option value="Saratoga Village">Saratoga Village</option>
+            <option value="Van Dyke Community Center">Van Dyke Community Center</option>
+            <option value="Vandalia Center">Vandalia Center</option>
+            <option value="God's Battalion Church">God's Battalion Church</option>
+            <option value="St. John's Recreation Center">St. John's Recreation Center</option>
+            <option value="Joseph A. Miccio Community Center">Joseph A. Miccio Community Center</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <h3>Please rate your voting site experience</h3>
+          <input type="radio" name="rating" value="1" /> 1
+          <input type="radio" name="rating" value="2" /> 2
+          <input type="radio" name="rating" value="3" /> 3
+          <input type="radio" name="rating" value="4" /> 4
+          <input type="radio" name="rating" value="5" /> 5
+          <input type="radio" name="rating" value="6" /> 6
+          <input type="radio" name="rating" value="7" /> 7
+          <input type="radio" name="rating" value="8" /> 8
+          <input type="radio" name="rating" value="9" /> 9
+          <input type="radio" name="rating" value="10" checked /> 10
+        </div>
+        <div class="form-group">
+          <h3>Comments about your experience</h3>
+          <textarea
+            name="comments"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="What did you like and/or dislike about your voting experience?"
+          ></textarea>
+        </div>
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>
