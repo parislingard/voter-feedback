@@ -1,5 +1,5 @@
-# Voter Feedback
-Python feedback form app that uses Flask and PostgreSQL.
+# Early Voter Feedback
+Early voter feedback form app that uses Python, Flask, and PostgreSQL.
 
 <img src="https://user-images.githubusercontent.com/48728002/97116396-2f281a80-16d3-11eb-930f-eab4ab1eba12.png" width="300" height="400"/>
 
